@@ -27,7 +27,7 @@
   color: var(--text-color);
 }
 
-/* .theme_light .decorated-zone::before {
+.theme_light .decorated-zone::before {
   content: "";
   position: absolute;
   width: 25px;
@@ -51,7 +51,7 @@
   background-color: transparent;
   inset-inline-end: 0;
   inset-block-start: 20px;
-} */
+}
 
 
 /* .page .theme_light {

@@ -11,6 +11,7 @@ body {
   max-inline-size: 1440px;
   margin: 0 auto;
   padding: 0;
+  appearance: none;
 }
 
 h1,

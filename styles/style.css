@@ -335,10 +335,6 @@ a:focus-visible {
     right: 0px;
   }
 
-  .header__description {
-    margin-block-start: 44px;
-  }
-
   .header,
   .footer {
     padding-block: 10px;
@@ -357,6 +353,7 @@ a:focus-visible {
 
   .header__description {
     width: 100%;
+    margin-block-start: 44px;
   }
 
   .content__central-title {
