@@ -4,9 +4,58 @@
   переключая тему
 */
 
-.page.theme_light {
+:root .theme_light {
+  --main-fonts: "IBM Plex mono";
+  --text-color: #353430;
+  --accent-color: #ff8dcb;
+  --bg-image: url(../images/cover-image-light.png);
+  --h1-h2-title: #ffc2e6;
+  --p-color: #353430;
+  --border-opacity: 53, 52, 48;
+  --shadow-title: #ff0070;
+}
+
+.theme_light .header__decor {
+  display: none;
+}
+
+.theme_light .content__title {
+  color: var(--text-color);
+}
+
+.theme_light .header__theme-menu-button {
+  color: var(--text-color);
+}
+
+.theme_light .decorated-zone::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border: 1px solid var(--text-color);
+  border-inline-end: none;
+  border-block-start: none;
+  background-color: transparent;
+  inset-inline-start: 0;
+  inset-block-end: 20px;
+}
+
+.theme_light .decorated-zone::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border: 1px solid var(--text-color);
+  border-inline-start: none;
+  border-block-end: none;
+  background-color: transparent;
+  inset-inline-end: 0;
+  inset-block-start: 20px;
+}
+
+/* .page .theme_light {
+ 
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
-}
