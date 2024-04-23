@@ -38,6 +38,7 @@
   position: absolute;
   display: none;
   align-items: center;
+  text-transform: uppercase;
   gap: 10px;
   inset-inline-end: 33px;
   inset-block-start: 22px;
