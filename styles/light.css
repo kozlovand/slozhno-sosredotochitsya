@@ -7,7 +7,7 @@
 :root .theme_light {
   --bg-image: url(../images/cover-image-light.png);
   --bg: #fff1f7;
-  --bg-accent:#ff8dcb;
+  --bg-accent: #ff8dcb;
   --border-btn: rgba(50 49 45 / 0.4);
   --shadow-title: #ff0070;
   --h1-h2-title: #ffc2e6;
@@ -20,12 +20,11 @@
   display: none;
 }
 
-
-@media (prefers-color-scheme: light){ 
+@media (prefers-color-scheme: light) {
   :root {
     --bg-image: url(../images/cover-image-light.png);
     --bg: #fff1f7;
-    --bg-accent:#ff8dcb;
+    --bg-accent: #ff8dcb;
     --border-btn: rgba(50 49 45 / 0.4);
     --shadow-title: #ff0070;
     --h1-h2-title: #ffc2e6;

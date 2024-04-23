@@ -7,10 +7,10 @@
 :root .theme_dark {
   --bg-image: url(../images/cover-image-dark.png);
   --bg: #000028;
-  --bg-accent:#ff0070;
+  --bg-accent: #ff0070;
   --border-btn: rgba(255 0 112 / 0.4);
   --shadow-title: #ff0070;
-  --h1-h2-title: #db00ff;;
+  --h1-h2-title: #db00ff;
   --p-color: #f1b2ce;
   --h3-color: #ff0070;
   --h4-contrast: #000028;
@@ -20,14 +20,14 @@
   display: flex;
 }
 
-@media (prefers-color-scheme: dark) { 
+@media (prefers-color-scheme: dark) {
   :root {
     --bg-image: url(../images/cover-image-dark.png);
     --bg: #000028;
-    --bg-accent:#ff0070;
+    --bg-accent: #ff0070;
     --border-btn: rgba(255 0 112 / 0.4);
     --shadow-title: #ff0070;
-    --h1-h2-title: #db00ff;;
+    --h1-h2-title: #db00ff;
     --p-color: #f1b2ce;
     --h3-color: #ff0070;
     --h4-contrast: #000028;
@@ -36,5 +36,4 @@
   .header__decor {
     display: flex;
   }
-  
 }
