@@ -3,181 +3,38 @@
   здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-:root .theme_dark {
-  --main-fonts: "IBM Plex mono";
-  --p-color: #f1b2ce;
-  --text-color: #000028;
-  --accent-color: #ff0070;
-  --bg-image: url(../images/cover-image-dark.png);
-  --h1-h2-title: #db00ff;
-  --border-opacity: 255, 0, 112;
-}
 
-/* .page .theme_dark {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+:root .theme_dark {
+  --bg-image: url(../images/cover-image-dark.png);
+  --bg: #000028;
+  --bg-accent:#ff0070;
+  --border-btn: rgba(255 0 112 / 0.4);
+  --shadow-title: #ff0070;
+  --h1-h2-title: #db00ff;;
+  --p-color: #f1b2ce;
+  --h3-color: #ff0070;
+  --h4-contrast: #000028;
+}
 
 .theme_dark .header__decor {
   display: flex;
-  color: var(--accent-color);
 }
 
-.theme_dark .header__description {
-  color: var(--text-color);
-}
-
-.theme_dark .decorated-zone::before {
-  content: "";
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  border: 1px solid var(--accent-color);
-  border-inline-end: none;
-  border-block-start: none;
-  background-color: transparent;
-  inset-inline-start: 0;
-  inset-block-end: 20px;
-}
-
-.theme_dark .decorated-zone::after {
-  content: "";
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  border: 1px solid var(--accent-color);
-  border-inline-start: none;
-  border-block-end: none;
-  background-color: transparent;
-  inset-inline-end: 0;
-  inset-block-start: 20px;
-}
-
-.theme_dark .header__theme-menu-button {
-  border: none;
-  padding-inline: 13px;
-  padding-block: 1.5px;
-  color: var(--accent-color);
-  font-family: var(--main-fonts, sans-serif);
-  line-height: 1em;
-  background-color: transparent;
-  cursor: pointer;
-}
-
-.theme_dark .header__theme-menu-button_active {
-  border: 1px solid currentColor;
-  pointer-events: none;
-}
-
-.theme_dark .header__theme-menu-button:hover {
-  border: 1px solid rgba(var(--border-opacity), 0.4);
-}
-
-.theme_dark .header__theme-menu-button:focus {
-  outline: none;
-}
-
-.theme_dark .header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--accent-color);
-  outline-color: transparent;
-}
-
-.theme_dark .content__title {
-  color: var(--accent-color);
-}
-
-.theme_dark .content__block-text {
-  color: var(--p-color);
-}
-
-.theme_dark .content__block-item-text {
-  color: var(--p-color);
-}
-
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) { 
   :root {
-    --main-fonts: "IBM Plex mono";
-    --p-color: #f1b2ce;
-    --text-color: #000028;
-    --accent-color: #ff0070;
     --bg-image: url(../images/cover-image-dark.png);
-    --h1-h2-title: #db00ff;
-    --border-opacity: 255, 0, 112;
+    --bg: #000028;
+    --bg-accent:#ff0070;
+    --border-btn: rgba(255 0 112 / 0.4);
+    --shadow-title: #ff0070;
+    --h1-h2-title: #db00ff;;
+    --p-color: #f1b2ce;
+    --h3-color: #ff0070;
+    --h4-contrast: #000028;
   }
 
   .header__decor {
     display: flex;
-    color: var(--accent-color);
   }
-
-  .header__description {
-    color: var(--text-color);
-  }
-
-  .decorated-zone::before {
-    content: "";
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    border: 1px solid var(--accent-color);
-    border-inline-end: none;
-    border-block-start: none;
-    background-color: transparent;
-    inset-inline-start: 0;
-    inset-block-end: 20px;
-  }
-
-  .decorated-zone::after {
-    content: "";
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    border: 1px solid var(--accent-color);
-    border-inline-start: none;
-    border-block-end: none;
-    background-color: transparent;
-    inset-inline-end: 0;
-    inset-block-start: 20px;
-  }
-
-  .header__theme-menu-button {
-    border: none;
-    padding-inline: 13px;
-    padding-block: 1.5px;
-    color: var(--accent-color);
-    font-family: var(--main-fonts, sans-serif);
-    line-height: 1em;
-    background-color: transparent;
-    cursor: pointer;
-  }
-
-  .header__theme-menu-button_active {
-    border: 1px solid currentColor;
-    pointer-events: none;
-  }
-
-  .content__title {
-    color: var(--accent-color);
-  }
-
-  .content__block-text {
-    color: var(--p-color);
-  }
-
-  .content__block-item-text {
-    color: var(--p-color);
-  }
-  .header__theme-menu-button:hover {
-    border: 1px solid rgba(var(--border-opacity), 0.4);
-  }
-
-  .header__theme-menu-button:focus {
-    outline: none;
-  }
-
-  .header__theme-menu-button:focus-visible {
-    border-bottom: 1px solid var(--accent-color);
-    outline-color: transparent;
-  }
+  
 }

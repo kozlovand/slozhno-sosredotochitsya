@@ -2,29 +2,34 @@
 /* день */
 .page {
   max-width: 1024px;
-  padding-inline: 20px;
-  font-family: var(--main-fonts);
+  font-family: var(--main-fonts), sans-serif;
   font-weight: normal;
   font-size: 18px;
   line-height: 1.3em;
+  background-color: var(--bg);
   background-image: var(--bg-image);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
   background-attachment: fixed;
+  color: var(--p-color);
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
 
-a {
+.link {
   text-decoration: none;
-  text-shadow: 2px 2px 0 var(--accent-color);
+  text-shadow: 2px 2px 0 var(--bg-accent);
 }
 
-a:hover {
+.link:hover {
   border-block-end: 1px solid currentColor;
 }
 
-a:focus-visible {
+.link:focus {
+  outline: none;
+}
+
+.link:focus-visible {
   outline: 1px solid currentColor;
   outline-offset: 0.5px;
 }
@@ -34,7 +39,7 @@ a:focus-visible {
   display: none;
   align-items: center;
   gap: 10px;
-  inset-inline-end: 10px;
+  inset-inline-end: 33px;
   inset-block-start: 22px;
 }
 
@@ -44,42 +49,39 @@ a:focus-visible {
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  box-shadow: 0px 0px 4px 2px var(--accent-color);
-  background-color: var(--accent-color);
+  box-shadow: 0px 0px 4px 2px var(--bg-accent);
+  background-color: var(--bg-accent);
 }
 
 .header {
   position: relative;
   display: grid;
-  grid-template-rows: repeat(3, 1fr);
-  height: min(100vh, 1024px);
-  padding-block: 20px;
-}
-
-.decorated-zone::after {
-  content: "";
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  border: 1px solid var(--text-color);
-  border-inline-start: none;
-  border-block-end: none;
-  background-color: transparent;
-  inset-inline-end: 0;
-  inset-block-start: 20px;
+  grid-template-rows: 1fr min-content 1fr;
+  block-size: min(100vh, 1024px);
+  padding: var(--padding-base);
+  color: var(--h3-color);
 }
 
 .decorated-zone::before {
-  content: "";
+  content: '';
   position: absolute;
-  width: 25px;
-  height: 25px;
-  border: 1px solid var(--text-color);
-  border-inline-end: none;
-  border-block-start: none;
-  background-color: transparent;
-  inset-inline-start: 0;
-  inset-block-end: 20px;
+  border-inline-end: 1px solid currentColor;
+  border-block-start: 1px solid currentColor;
+  inline-size: 25px;
+  block-size: 25px;
+  inset-block-start: var(--padding-base);
+  inset-inline-end: var(--padding-base);
+}
+
+.decorated-zone::after {
+  content: '';
+  position: absolute;
+  border-inline-start: 1px solid currentColor;
+  border-block-end: 1px solid currentColor;
+  inline-size: 25px;
+  block-size: 25px;
+  inset-block-end: var(--padding-base);
+  inset-inline-start: var(--padding-base);
 }
 
 .header__theme-menu {
@@ -93,10 +95,10 @@ a:focus-visible {
 }
 
 .header__theme-menu-button {
-  border: none;
+  border: 1px solid transparent;
   padding-inline: 13px;
   padding-block: 1.5px;
-  color: var(--text-color);
+  text-transform: lowercase;
   font-family: var(--main-fonts, sans-serif);
   line-height: 1em;
   background-color: transparent;
@@ -104,7 +106,7 @@ a:focus-visible {
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid rgba(var(--border-opacity), 0.4);
+  border: 1px solid var(--border-btn);
 }
 
 .header__theme-menu-button:focus {
@@ -112,7 +114,7 @@ a:focus-visible {
 }
 
 .header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--text-color);
+  border-bottom: 1px solid currentColor;
   outline-color: transparent;
 }
 
@@ -134,19 +136,20 @@ a:focus-visible {
 
 .header__description {
   justify-self: end;
-  margin-block-start: 56px;
   width: 50%;
   height: fit-content;
-  color: var(--text-color);
+  align-self:center;
 }
 
 .title-decor {
   font-weight: bold;
-  background-color: var(--accent-color);
+  background-color: var(--bg-accent);
+  color:var(--h4-contrast);
 }
 
 .content {
   margin-block-start: 60px;
+  padding-inline: var(--padding-base);
 }
 
 .content__top {
@@ -162,7 +165,7 @@ a:focus-visible {
 }
 
 .content__title {
-  color: var(--text-color);
+  color: var(--h3-color);
   font-weight: bold;
   font-size: inherit;
 }
@@ -172,12 +175,8 @@ a:focus-visible {
 }
 .content__block-title {
   margin-block-end: 10px;
-  color: var(--text-color);
 }
 
-.content__block-text {
-  color: var(--text-color);
-}
 
 .content__central {
   display: grid;
@@ -221,7 +220,6 @@ a:focus-visible {
 
 .gallery__title {
   margin-block-end: 20px;
-  color: var(--text-color);
   font-weight: bold;
   font-size: inherit;
 }
@@ -266,7 +264,8 @@ a:focus-visible {
   justify-content: center;
   align-items: center;
   height: min(100vh, 1024px);
-  padding-block: 20px;
+  color: var(--h3-color);
+  padding: var(--padding-base);
 }
 
 .footer__title {
@@ -281,16 +280,15 @@ a:focus-visible {
   .header__theme-menu-list {
     flex-direction: column;
     align-items: end;
-    margin-block-end: 65px;
   }
 
   .header__title,
   .footer__title {
-    text-shadow: 4px 4px 0 var(--accent-color);
+    text-shadow: 4px 4px 0 var(--bg-accent);
   }
 
   .header__theme-menu {
-    align-self: end;
+    align-self: center;
   }
 
 
@@ -316,17 +314,14 @@ a:focus-visible {
     grid-template-rows: 192px 230px 318px;
   }
 
-  .header__description {
-    margin-block-start: 48px;
-  }
   }
 
 
 @media (width <= 375px) {
-  .page {
-    padding-inline: 10px;
+  :root {
+    --padding-base: 10px;
   }
-
+  
   .content {
     margin-block-start: 40px;
   }
@@ -335,10 +330,6 @@ a:focus-visible {
     right: 0px;
   }
 
-  .header,
-  .footer {
-    padding-block: 10px;
-  }
 
   .header__title,
   .footer__title {
@@ -348,12 +339,11 @@ a:focus-visible {
   .header__theme-menu-list {
     flex-direction: column;
     align-items: end;
-    margin-block-end: 59px;
   }
 
   .header__description {
     width: 100%;
-    margin-block-start: 44px;
+
   }
 
   .content__central-title {
@@ -375,6 +365,7 @@ a:focus-visible {
     grid-column: auto;
   }
 
+
   .gallery {
     margin-block-end: 40px;
   }
@@ -389,29 +380,4 @@ a:focus-visible {
     gap: 10px;
   }
 
-  .decorated-zone::after {
-    content: "";
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    border: 1px solid currentColor;
-    border-inline-start: none;
-    border-block-end: none;
-    background-color: transparent;
-    inset-inline-end: 0;
-    inset-block-start: 10px;
-  }
-
-  .decorated-zone::before {
-    content: "";
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    border: 1px solid currentColor;
-    border-inline-end: none;
-    border-block-start: none;
-    background-color: transparent;
-    inset-inline-start: 0;
-    inset-block-end: 10px;
-  }
 }
