@@ -4,7 +4,7 @@
 */
 
 :root {
-  --main-fonts: "IBM Plex mono";
+  --main-fonts: "IBM Plex mono", "Andale Mono";
   --bg-image: url(../images/cover-image-light.png);
   --padding-base: 20px;
   --bg: #fff1f7;
