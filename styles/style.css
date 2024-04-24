@@ -175,8 +175,8 @@
   grid-row: -1/1;
 }
 .content__block-title {
-  font-size: inherit;
   margin-block-end: 10px;
+  font-size: inherit;
 }
 
 .content__central {
@@ -323,6 +323,11 @@
     --padding-base: 10px;
   }
 
+  .header__decor {
+    inset-inline-end: 20px;
+    inset-block-start: 11px;
+  }
+
   .header__title {
     right: 0px;
   }
@@ -338,11 +343,6 @@
 }
 
 @media (width <= 375px) {
-  .header__decor {
-    inset-inline-end: 20px;
-    inset-block-start: 11px;
-  }
-
   .content {
     margin-block-start: 40px;
   }
@@ -351,7 +351,6 @@
   .footer__title {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
-
 
   .header__theme-menu-list {
     flex-direction: column;
