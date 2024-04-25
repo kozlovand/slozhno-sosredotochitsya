@@ -99,7 +99,7 @@
   border: 1px solid transparent;
   padding-inline: 13px;
   padding-block: 1.5px;
-  font-family: var(--main-fonts, sans-serif);
+  font-family: var(--main-fonts);
   line-height: 1em;
   text-transform: lowercase;
   background-color: transparent;
