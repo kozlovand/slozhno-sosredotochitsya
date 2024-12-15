@@ -1,1 +1,7 @@
-https://github.com/kozlovand/slozhno-sosredotochitsya.git
+# Проект сложно сосредоточиться
+
+## Задача
+Верстка адаптивного сайта в светлой и тёмной темах. 
+
+## Деплой
+[Сайт](https://kozlovand.github.io/slozhno-sosredotochitsya/)
